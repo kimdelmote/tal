@@ -66,6 +66,7 @@ define(
              * @returns A device-specific object that represents the widget as displayed on the device (in a browser, a DOMElement);
              */
             render: function(device) {
+                var self = this;
                 this.outputElement = device.createButton(this.id, this.getClasses(), '#');
                 for(var i=0; i<this._childWidgetOrder.length; i++) {
                     device.appendChildElement(this.outputElement, this._childWidgetOrder[i].render(device));
