@@ -70,6 +70,15 @@ define(
                 for(var i=0; i<this._childWidgetOrder.length; i++) {
                     device.appendChildElement(this.outputElement, this._childWidgetOrder[i].render(device));
                 }
+
+                this.outputElement.onmouseover=function(){
+                    self.focus(true);
+                };
+
+                this.outputElement.onclick=function(){
+                    self.select();
+                };
+
                 return this.outputElement;
             },
             /**
